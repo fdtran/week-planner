@@ -11,7 +11,9 @@ angular.module('app.calendar', [] )
   ];
 
   $scope.init = () => {
-    $scope.todos = Tasks.getAll();
+    Tasks.getAll(function(response){
+      $scope.todos = response.data;
+    });
   };
 
 

@@ -8,7 +8,7 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/calendar');
 
-app.use(express.static('/Users/student/Desktop/week-planner/public'));
+app.use(express.static("/Users/felixtran/Desktop/Javascript/hack-reactor-course/projects/week-planner/public"));
 
 app.get('/api/tasks', (request, response) => {
   Task.find({}, function (err, res) {
